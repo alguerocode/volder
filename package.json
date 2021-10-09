@@ -19,8 +19,8 @@
     "lint": "tsdx lint src test",
     "format": "tsdx lint src test --fix",
     "prepare": "tsdx build && husky install",
-    "analyze": "size-limit --why",
-    "publish": "npm publish --access public"
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
   "prettier": {
     "printWidth": 100,
@@ -31,17 +31,19 @@
   "homepage": "https://github.com/devSupporters/volder",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/devSupporters/volder.git"
+    "url": "https://github.com/devSupporters/volder.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
+   "registry": "https://registry.npmjs.org/volder"
+ },
   "name": "volder",
   "author": "salah alhashmi",
   "module": "dist/volder.esm.js",
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.5.5",
     "husky": "^7.0.0",
     "nodemon": "^2.0.13",
+    "size-limit": "^5.0.3",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^3.9.10"
