@@ -20,6 +20,7 @@
     "format": "tsdx lint src test --fix",
     "prepare": "tsdx build && husky install",
     "size": "size-limit",
+    "publish": "npm publish --access public",
     "analyze": "size-limit --why"
   },
   "prettier": {
