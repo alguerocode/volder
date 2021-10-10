@@ -11,6 +11,9 @@
   "engines": {
     "node": ">=10"
   },
+  "resolutions": {
+    "tsdx": "^0.14.1"
+  },
   "scripts": {
     "start": "tsdx watch",
     "dev": "nodemon test.js",
@@ -18,8 +21,9 @@
     "test": "tsdx test --coverage",
     "lint": "tsdx lint src test",
     "format": "tsdx lint src test --fix",
-    "prepare": "tsdx build && husky install",
-    "publish": "npm publish --access public"
+    "prepare": "tsdx build",
+    "publish": "npm publish --access public",
+    "preinstall": "npx npm-force-resolutions"
   },
   "prettier": {
     "printWidth": 100,
@@ -41,8 +45,8 @@
   "devDependencies": {
     "husky": "^7.0.2",
     "nodemon": "^2.0.13",
-    "tsdx": "^0.14.1",
+    "tsdx": "^0.7.2",
     "tslib": "^2.3.1",
-    "typescript": "^3.9.10"
+    "typescript": "^4.4.3"
   }
 }
